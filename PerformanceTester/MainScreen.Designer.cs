@@ -39,7 +39,6 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.dataGridViewDatabase = new System.Windows.Forms.DataGridView();
             this.dBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databasePerformance = new PerformanceTester.DatabasePerformance();
             this.refreshButton = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,12 +47,6 @@
             this.comboBoxComputerNameBusiness = new System.Windows.Forms.ComboBox();
             this.numericUpDownLineBusiness = new System.Windows.Forms.NumericUpDown();
             this.dataGridViewBusiness = new System.Windows.Forms.DataGridView();
-            this.computerNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lineNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpuTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpuUsageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.elapsedTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dBLocalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kgeletaDataSet = new PerformanceTester.kgeletaDataSet();
             this.refreshBusiness = new System.Windows.Forms.Button();
@@ -65,19 +58,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.buttonPresentation = new System.Windows.Forms.Button();
             this.dBBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.computerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lineNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpuTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.elapsedTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bytesReceivedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rowsSelectedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDatabase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databasePerformance)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineBusiness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBusiness)).BeginInit();
@@ -171,33 +156,13 @@
             this.dataGridViewDatabase.AllowUserToAddRows = false;
             this.dataGridViewDatabase.AllowUserToDeleteRows = false;
             this.dataGridViewDatabase.AllowUserToOrderColumns = true;
-            this.dataGridViewDatabase.AutoGenerateColumns = false;
             this.dataGridViewDatabase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDatabase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.computerNameDataGridViewTextBoxColumn,
-            this.lineNumberDataGridViewTextBoxColumn,
-            this.cpuTimeDataGridViewTextBoxColumn,
-            this.elapsedTimeDataGridViewTextBoxColumn,
-            this.bytesReceivedDataGridViewTextBoxColumn,
-            this.rowsSelectedDataGridViewTextBoxColumn,
-            this.addTimeDataGridViewTextBoxColumn});
-            this.dataGridViewDatabase.DataSource = this.dBBindingSource1;
             this.dataGridViewDatabase.Location = new System.Drawing.Point(8, 155);
             this.dataGridViewDatabase.Name = "dataGridViewDatabase";
             this.dataGridViewDatabase.ReadOnly = true;
             this.dataGridViewDatabase.Size = new System.Drawing.Size(791, 296);
             this.dataGridViewDatabase.TabIndex = 3;
             this.dataGridViewDatabase.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDatabase_CellContentClick);
-            // 
-            // dBBindingSource
-            // 
-            this.dBBindingSource.DataMember = "DB";
-            this.dBBindingSource.DataSource = this.databasePerformance;
-            // 
-            // databasePerformance
-            // 
-            this.databasePerformance.DataSetName = "DatabasePerformance";
-            this.databasePerformance.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // refreshButton
             // 
@@ -280,63 +245,12 @@
             this.dataGridViewBusiness.AllowUserToAddRows = false;
             this.dataGridViewBusiness.AllowUserToDeleteRows = false;
             this.dataGridViewBusiness.AllowUserToOrderColumns = true;
-            this.dataGridViewBusiness.AutoGenerateColumns = false;
             this.dataGridViewBusiness.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBusiness.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.computerNameDataGridViewTextBoxColumn1,
-            this.lineNumberDataGridViewTextBoxColumn1,
-            this.cpuTimeDataGridViewTextBoxColumn1,
-            this.cpuUsageDataGridViewTextBoxColumn,
-            this.elapsedTimeDataGridViewTextBoxColumn1,
-            this.addTimeDataGridViewTextBoxColumn1});
-            this.dataGridViewBusiness.DataSource = this.dBLocalBindingSource;
             this.dataGridViewBusiness.Location = new System.Drawing.Point(8, 155);
             this.dataGridViewBusiness.Name = "dataGridViewBusiness";
             this.dataGridViewBusiness.ReadOnly = true;
             this.dataGridViewBusiness.Size = new System.Drawing.Size(791, 296);
             this.dataGridViewBusiness.TabIndex = 1;
-            // 
-            // computerNameDataGridViewTextBoxColumn1
-            // 
-            this.computerNameDataGridViewTextBoxColumn1.DataPropertyName = "ComputerName";
-            this.computerNameDataGridViewTextBoxColumn1.HeaderText = "ComputerName";
-            this.computerNameDataGridViewTextBoxColumn1.Name = "computerNameDataGridViewTextBoxColumn1";
-            this.computerNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // lineNumberDataGridViewTextBoxColumn1
-            // 
-            this.lineNumberDataGridViewTextBoxColumn1.DataPropertyName = "LineNumber";
-            this.lineNumberDataGridViewTextBoxColumn1.HeaderText = "LineNumber";
-            this.lineNumberDataGridViewTextBoxColumn1.Name = "lineNumberDataGridViewTextBoxColumn1";
-            this.lineNumberDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // cpuTimeDataGridViewTextBoxColumn1
-            // 
-            this.cpuTimeDataGridViewTextBoxColumn1.DataPropertyName = "CpuTime";
-            this.cpuTimeDataGridViewTextBoxColumn1.HeaderText = "CpuTime";
-            this.cpuTimeDataGridViewTextBoxColumn1.Name = "cpuTimeDataGridViewTextBoxColumn1";
-            this.cpuTimeDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // cpuUsageDataGridViewTextBoxColumn
-            // 
-            this.cpuUsageDataGridViewTextBoxColumn.DataPropertyName = "CpuUsage";
-            this.cpuUsageDataGridViewTextBoxColumn.HeaderText = "CpuUsage";
-            this.cpuUsageDataGridViewTextBoxColumn.Name = "cpuUsageDataGridViewTextBoxColumn";
-            this.cpuUsageDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // elapsedTimeDataGridViewTextBoxColumn1
-            // 
-            this.elapsedTimeDataGridViewTextBoxColumn1.DataPropertyName = "ElapsedTime";
-            this.elapsedTimeDataGridViewTextBoxColumn1.HeaderText = "ElapsedTime";
-            this.elapsedTimeDataGridViewTextBoxColumn1.Name = "elapsedTimeDataGridViewTextBoxColumn1";
-            this.elapsedTimeDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // addTimeDataGridViewTextBoxColumn1
-            // 
-            this.addTimeDataGridViewTextBoxColumn1.DataPropertyName = "AddTime";
-            this.addTimeDataGridViewTextBoxColumn1.HeaderText = "AddTime";
-            this.addTimeDataGridViewTextBoxColumn1.Name = "addTimeDataGridViewTextBoxColumn1";
-            this.addTimeDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dBLocalBindingSource
             // 
@@ -421,60 +335,6 @@
             this.buttonPresentation.Text = "test";
             this.buttonPresentation.UseVisualStyleBackColor = true;
             // 
-            // dBBindingSource1
-            // 
-            this.dBBindingSource1.DataMember = "DB";
-            this.dBBindingSource1.DataSource = this.databasePerformance;
-            // 
-            // computerNameDataGridViewTextBoxColumn
-            // 
-            this.computerNameDataGridViewTextBoxColumn.DataPropertyName = "ComputerName";
-            this.computerNameDataGridViewTextBoxColumn.HeaderText = "ComputerName";
-            this.computerNameDataGridViewTextBoxColumn.Name = "computerNameDataGridViewTextBoxColumn";
-            this.computerNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lineNumberDataGridViewTextBoxColumn
-            // 
-            this.lineNumberDataGridViewTextBoxColumn.DataPropertyName = "LineNumber";
-            this.lineNumberDataGridViewTextBoxColumn.HeaderText = "LineNumber";
-            this.lineNumberDataGridViewTextBoxColumn.Name = "lineNumberDataGridViewTextBoxColumn";
-            this.lineNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cpuTimeDataGridViewTextBoxColumn
-            // 
-            this.cpuTimeDataGridViewTextBoxColumn.DataPropertyName = "CpuTime";
-            this.cpuTimeDataGridViewTextBoxColumn.HeaderText = "CpuTime";
-            this.cpuTimeDataGridViewTextBoxColumn.Name = "cpuTimeDataGridViewTextBoxColumn";
-            this.cpuTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // elapsedTimeDataGridViewTextBoxColumn
-            // 
-            this.elapsedTimeDataGridViewTextBoxColumn.DataPropertyName = "ElapsedTime";
-            this.elapsedTimeDataGridViewTextBoxColumn.HeaderText = "ElapsedTime";
-            this.elapsedTimeDataGridViewTextBoxColumn.Name = "elapsedTimeDataGridViewTextBoxColumn";
-            this.elapsedTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bytesReceivedDataGridViewTextBoxColumn
-            // 
-            this.bytesReceivedDataGridViewTextBoxColumn.DataPropertyName = "BytesReceived";
-            this.bytesReceivedDataGridViewTextBoxColumn.HeaderText = "BytesReceived";
-            this.bytesReceivedDataGridViewTextBoxColumn.Name = "bytesReceivedDataGridViewTextBoxColumn";
-            this.bytesReceivedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rowsSelectedDataGridViewTextBoxColumn
-            // 
-            this.rowsSelectedDataGridViewTextBoxColumn.DataPropertyName = "RowsSelected";
-            this.rowsSelectedDataGridViewTextBoxColumn.HeaderText = "RowsSelected";
-            this.rowsSelectedDataGridViewTextBoxColumn.Name = "rowsSelectedDataGridViewTextBoxColumn";
-            this.rowsSelectedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addTimeDataGridViewTextBoxColumn
-            // 
-            this.addTimeDataGridViewTextBoxColumn.DataPropertyName = "AddTime";
-            this.addTimeDataGridViewTextBoxColumn.HeaderText = "AddTime";
-            this.addTimeDataGridViewTextBoxColumn.Name = "addTimeDataGridViewTextBoxColumn";
-            this.addTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,7 +352,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDatabase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databasePerformance)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineBusiness)).EndInit();
@@ -514,7 +373,6 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.DataGridView dataGridViewDatabase;
-        private DatabasePerformance databasePerformance;
         private System.Windows.Forms.BindingSource dBBindingSource;
         private DatabasePerformanceTableAdapters.DBTableAdapter dBTableAdapter;
         private System.Windows.Forms.Button refreshBusiness;
@@ -522,12 +380,6 @@
         private kgeletaDataSet kgeletaDataSet;
         private System.Windows.Forms.BindingSource dBLocalBindingSource;
         private kgeletaDataSetTableAdapters.DBLocalTableAdapter dBLocalTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lineNumberDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpuTimeDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpuUsageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn elapsedTimeDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addTimeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.ComboBox comboBoxComputerName;
         private System.Windows.Forms.Label labelComputerName;
@@ -542,13 +394,6 @@
         private System.Windows.Forms.Button buttonPresentation;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxPresentation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lineNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpuTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn elapsedTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bytesReceivedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rowsSelectedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource dBBindingSource1;
     }
 }

@@ -72,10 +72,13 @@ namespace PerformanceTester
         private void MainScreen_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'kgeletaDataSet.DBLocal' table. You can move, or remove it, as needed.
-            this.dBLocalTableAdapter.Fill(this.kgeletaDataSet.DBLocal);
+            //this.dBLocalTableAdapter.Fill(this.kgeletaDataSet.DBLocal);
             // TODO: This line of code loads data into the 'databasePerformance.DB' table. You can move, or remove it, as needed.
-            this.dBTableAdapter.Fill(this.databasePerformance.DB);
-            
+            //this.dBTableAdapter.Fill(this.databasePerformance.DB);
+
+            // TEST:
+            dataGridViewDatabase.DataSource = QueryTestResult.Select();
+
             QueryTestResult.FillComputerName(comboBoxComputerName);
             LocalTestResult.FillComputerName(comboBoxComputerNameBusiness);
 

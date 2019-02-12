@@ -28,7 +28,7 @@ namespace PerformanceTester.classes
             DataTable dataTable = new DataTable();
             try
             {
-                String query = "use kgeleta; select* from Performance.DB order by ComputerName, LineNumber, AddTime desc;";
+                String query = "use kgeleta; select * from Performance.DB order by ComputerName, LineNumber, AddTime desc;";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
 
