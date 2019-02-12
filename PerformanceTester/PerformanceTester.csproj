@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classes\LocalTestResult.cs" />
+    <Compile Include="classes\PresentationTestResult.cs" />
     <Compile Include="classes\QueryTestResult.cs" />
     <Compile Include="DatabasePerformance.Designer.cs">
       <AutoGen>True</AutoGen>

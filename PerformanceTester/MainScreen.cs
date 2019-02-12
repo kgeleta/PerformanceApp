@@ -143,5 +143,10 @@ namespace PerformanceTester
             dataGridViewBusiness.DataSource = LocalTestResult.Search(computerName, lineNumber);
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
