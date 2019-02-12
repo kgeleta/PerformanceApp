@@ -25,7 +25,7 @@ namespace PerformanceTester.classes
             startInfo.FileName = "cmd.exe";
             startInfo.RedirectStandardOutput = true;
             // TODO: change for local directory
-            startInfo.WorkingDirectory = "C:\\Users\\Mister Fahrenheit\\Downloads\\curl\\curl-7.64.0-win64-mingw\\bin";
+            startInfo.WorkingDirectory = "C:\\Users\\Leslie\\Downloads\\curl-7.64.0-win64-mingw\\bin";
             startInfo.Arguments = "/C curltime " + url;
             startInfo.UseShellExecute = false;
 

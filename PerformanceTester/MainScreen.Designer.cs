@@ -38,7 +38,6 @@
             this.comboBoxComputerName = new System.Windows.Forms.ComboBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.dataGridViewDatabase = new System.Windows.Forms.DataGridView();
-            this.dBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.refreshButton = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,29 +46,43 @@
             this.comboBoxComputerNameBusiness = new System.Windows.Forms.ComboBox();
             this.numericUpDownLineBusiness = new System.Windows.Forms.NumericUpDown();
             this.dataGridViewBusiness = new System.Windows.Forms.DataGridView();
-            this.dBLocalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kgeletaDataSet = new PerformanceTester.kgeletaDataSet();
             this.refreshBusiness = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dBTableAdapter = new PerformanceTester.DatabasePerformanceTableAdapters.DBTableAdapter();
-            this.dBLocalTableAdapter = new PerformanceTester.kgeletaDataSetTableAdapters.DBLocalTableAdapter();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxPresentation = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.buttonPresentation = new System.Windows.Forms.Button();
-            this.dBBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxPresentation = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dB_performance = new PerformanceTester.DB_performance();
+            this.dBBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dBTableAdapter1 = new PerformanceTester.DB_performanceTableAdapters.DBTableAdapter();
+            this.computerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lineNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpuTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elapsedTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bytesReceivedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rowsSelectedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dBLocal_performance = new PerformanceTester.DBLocal_performance();
+            this.dBLocalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dBLocalTableAdapter1 = new PerformanceTester.DBLocal_performanceTableAdapters.DBLocalTableAdapter();
+            this.computerNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lineNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpuTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpuUsageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elapsedTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDatabase)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineBusiness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBusiness)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBLocalBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kgeletaDataSet)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dBBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_performance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBLocal_performance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBLocalBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -156,7 +169,17 @@
             this.dataGridViewDatabase.AllowUserToAddRows = false;
             this.dataGridViewDatabase.AllowUserToDeleteRows = false;
             this.dataGridViewDatabase.AllowUserToOrderColumns = true;
+            this.dataGridViewDatabase.AutoGenerateColumns = false;
             this.dataGridViewDatabase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDatabase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.computerNameDataGridViewTextBoxColumn,
+            this.lineNumberDataGridViewTextBoxColumn,
+            this.cpuTimeDataGridViewTextBoxColumn,
+            this.elapsedTimeDataGridViewTextBoxColumn,
+            this.bytesReceivedDataGridViewTextBoxColumn,
+            this.rowsSelectedDataGridViewTextBoxColumn,
+            this.addTimeDataGridViewTextBoxColumn});
+            this.dataGridViewDatabase.DataSource = this.dBBindingSource2;
             this.dataGridViewDatabase.Location = new System.Drawing.Point(8, 155);
             this.dataGridViewDatabase.Name = "dataGridViewDatabase";
             this.dataGridViewDatabase.ReadOnly = true;
@@ -245,22 +268,21 @@
             this.dataGridViewBusiness.AllowUserToAddRows = false;
             this.dataGridViewBusiness.AllowUserToDeleteRows = false;
             this.dataGridViewBusiness.AllowUserToOrderColumns = true;
+            this.dataGridViewBusiness.AutoGenerateColumns = false;
             this.dataGridViewBusiness.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBusiness.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.computerNameDataGridViewTextBoxColumn1,
+            this.lineNumberDataGridViewTextBoxColumn1,
+            this.cpuTimeDataGridViewTextBoxColumn1,
+            this.cpuUsageDataGridViewTextBoxColumn,
+            this.elapsedTimeDataGridViewTextBoxColumn1,
+            this.addTimeDataGridViewTextBoxColumn1});
+            this.dataGridViewBusiness.DataSource = this.dBLocalBindingSource1;
             this.dataGridViewBusiness.Location = new System.Drawing.Point(8, 155);
             this.dataGridViewBusiness.Name = "dataGridViewBusiness";
             this.dataGridViewBusiness.ReadOnly = true;
             this.dataGridViewBusiness.Size = new System.Drawing.Size(791, 296);
             this.dataGridViewBusiness.TabIndex = 1;
-            // 
-            // dBLocalBindingSource
-            // 
-            this.dBLocalBindingSource.DataMember = "DBLocal";
-            this.dBLocalBindingSource.DataSource = this.kgeletaDataSet;
-            // 
-            // kgeletaDataSet
-            // 
-            this.kgeletaDataSet.DataSetName = "kgeletaDataSet";
-            this.kgeletaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // refreshBusiness
             // 
@@ -287,13 +309,34 @@
             this.tabPage3.Text = "Presentation Layer";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // dBTableAdapter
+            // buttonPresentation
             // 
-            this.dBTableAdapter.ClearBeforeFill = true;
+            this.buttonPresentation.Location = new System.Drawing.Point(588, 53);
+            this.buttonPresentation.Name = "buttonPresentation";
+            this.buttonPresentation.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonPresentation.Size = new System.Drawing.Size(75, 23);
+            this.buttonPresentation.TabIndex = 3;
+            this.buttonPresentation.Text = "test";
+            this.buttonPresentation.UseVisualStyleBackColor = true;
+            this.buttonPresentation.Click += new System.EventHandler(this.buttonPresentation_Click);
             // 
-            // dBLocalTableAdapter
+            // label4
             // 
-            this.dBLocalTableAdapter.ClearBeforeFill = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(33, 58);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "URL:";
+            // 
+            // textBoxPresentation
+            // 
+            this.textBoxPresentation.Location = new System.Drawing.Point(69, 55);
+            this.textBoxPresentation.Name = "textBoxPresentation";
+            this.textBoxPresentation.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBoxPresentation.Size = new System.Drawing.Size(504, 20);
+            this.textBoxPresentation.TabIndex = 1;
             // 
             // label3
             // 
@@ -307,33 +350,124 @@
             this.label3.Text = "Measure request, response and total time";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBoxPresentation
+            // dB_performance
             // 
-            this.textBoxPresentation.Location = new System.Drawing.Point(69, 55);
-            this.textBoxPresentation.Name = "textBoxPresentation";
-            this.textBoxPresentation.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBoxPresentation.Size = new System.Drawing.Size(504, 20);
-            this.textBoxPresentation.TabIndex = 1;
+            this.dB_performance.DataSetName = "DB_performance";
+            this.dB_performance.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label4
+            // dBBindingSource2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 58);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "URL:";
+            this.dBBindingSource2.DataMember = "DB";
+            this.dBBindingSource2.DataSource = this.dB_performance;
             // 
-            // buttonPresentation
+            // dBTableAdapter1
             // 
-            this.buttonPresentation.Location = new System.Drawing.Point(588, 53);
-            this.buttonPresentation.Name = "buttonPresentation";
-            this.buttonPresentation.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buttonPresentation.Size = new System.Drawing.Size(75, 23);
-            this.buttonPresentation.TabIndex = 3;
-            this.buttonPresentation.Text = "test";
-            this.buttonPresentation.UseVisualStyleBackColor = true;
+            this.dBTableAdapter1.ClearBeforeFill = true;
+            // 
+            // computerNameDataGridViewTextBoxColumn
+            // 
+            this.computerNameDataGridViewTextBoxColumn.DataPropertyName = "ComputerName";
+            this.computerNameDataGridViewTextBoxColumn.HeaderText = "ComputerName";
+            this.computerNameDataGridViewTextBoxColumn.Name = "computerNameDataGridViewTextBoxColumn";
+            this.computerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lineNumberDataGridViewTextBoxColumn
+            // 
+            this.lineNumberDataGridViewTextBoxColumn.DataPropertyName = "LineNumber";
+            this.lineNumberDataGridViewTextBoxColumn.HeaderText = "LineNumber";
+            this.lineNumberDataGridViewTextBoxColumn.Name = "lineNumberDataGridViewTextBoxColumn";
+            this.lineNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cpuTimeDataGridViewTextBoxColumn
+            // 
+            this.cpuTimeDataGridViewTextBoxColumn.DataPropertyName = "CpuTime";
+            this.cpuTimeDataGridViewTextBoxColumn.HeaderText = "CpuTime";
+            this.cpuTimeDataGridViewTextBoxColumn.Name = "cpuTimeDataGridViewTextBoxColumn";
+            this.cpuTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // elapsedTimeDataGridViewTextBoxColumn
+            // 
+            this.elapsedTimeDataGridViewTextBoxColumn.DataPropertyName = "ElapsedTime";
+            this.elapsedTimeDataGridViewTextBoxColumn.HeaderText = "ElapsedTime";
+            this.elapsedTimeDataGridViewTextBoxColumn.Name = "elapsedTimeDataGridViewTextBoxColumn";
+            this.elapsedTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bytesReceivedDataGridViewTextBoxColumn
+            // 
+            this.bytesReceivedDataGridViewTextBoxColumn.DataPropertyName = "BytesReceived";
+            this.bytesReceivedDataGridViewTextBoxColumn.HeaderText = "BytesReceived";
+            this.bytesReceivedDataGridViewTextBoxColumn.Name = "bytesReceivedDataGridViewTextBoxColumn";
+            this.bytesReceivedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rowsSelectedDataGridViewTextBoxColumn
+            // 
+            this.rowsSelectedDataGridViewTextBoxColumn.DataPropertyName = "RowsSelected";
+            this.rowsSelectedDataGridViewTextBoxColumn.HeaderText = "RowsSelected";
+            this.rowsSelectedDataGridViewTextBoxColumn.Name = "rowsSelectedDataGridViewTextBoxColumn";
+            this.rowsSelectedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addTimeDataGridViewTextBoxColumn
+            // 
+            this.addTimeDataGridViewTextBoxColumn.DataPropertyName = "AddTime";
+            this.addTimeDataGridViewTextBoxColumn.HeaderText = "AddTime";
+            this.addTimeDataGridViewTextBoxColumn.Name = "addTimeDataGridViewTextBoxColumn";
+            this.addTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dBLocal_performance
+            // 
+            this.dBLocal_performance.DataSetName = "DBLocal_performance";
+            this.dBLocal_performance.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dBLocalBindingSource1
+            // 
+            this.dBLocalBindingSource1.DataMember = "DBLocal";
+            this.dBLocalBindingSource1.DataSource = this.dBLocal_performance;
+            // 
+            // dBLocalTableAdapter1
+            // 
+            this.dBLocalTableAdapter1.ClearBeforeFill = true;
+            // 
+            // computerNameDataGridViewTextBoxColumn1
+            // 
+            this.computerNameDataGridViewTextBoxColumn1.DataPropertyName = "ComputerName";
+            this.computerNameDataGridViewTextBoxColumn1.HeaderText = "ComputerName";
+            this.computerNameDataGridViewTextBoxColumn1.Name = "computerNameDataGridViewTextBoxColumn1";
+            this.computerNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // lineNumberDataGridViewTextBoxColumn1
+            // 
+            this.lineNumberDataGridViewTextBoxColumn1.DataPropertyName = "LineNumber";
+            this.lineNumberDataGridViewTextBoxColumn1.HeaderText = "LineNumber";
+            this.lineNumberDataGridViewTextBoxColumn1.Name = "lineNumberDataGridViewTextBoxColumn1";
+            this.lineNumberDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cpuTimeDataGridViewTextBoxColumn1
+            // 
+            this.cpuTimeDataGridViewTextBoxColumn1.DataPropertyName = "CpuTime";
+            this.cpuTimeDataGridViewTextBoxColumn1.HeaderText = "CpuTime";
+            this.cpuTimeDataGridViewTextBoxColumn1.Name = "cpuTimeDataGridViewTextBoxColumn1";
+            this.cpuTimeDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cpuUsageDataGridViewTextBoxColumn
+            // 
+            this.cpuUsageDataGridViewTextBoxColumn.DataPropertyName = "CpuUsage";
+            this.cpuUsageDataGridViewTextBoxColumn.HeaderText = "CpuUsage";
+            this.cpuUsageDataGridViewTextBoxColumn.Name = "cpuUsageDataGridViewTextBoxColumn";
+            this.cpuUsageDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // elapsedTimeDataGridViewTextBoxColumn1
+            // 
+            this.elapsedTimeDataGridViewTextBoxColumn1.DataPropertyName = "ElapsedTime";
+            this.elapsedTimeDataGridViewTextBoxColumn1.HeaderText = "ElapsedTime";
+            this.elapsedTimeDataGridViewTextBoxColumn1.Name = "elapsedTimeDataGridViewTextBoxColumn1";
+            this.elapsedTimeDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // addTimeDataGridViewTextBoxColumn1
+            // 
+            this.addTimeDataGridViewTextBoxColumn1.DataPropertyName = "AddTime";
+            this.addTimeDataGridViewTextBoxColumn1.HeaderText = "AddTime";
+            this.addTimeDataGridViewTextBoxColumn1.Name = "addTimeDataGridViewTextBoxColumn1";
+            this.addTimeDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // MainScreen
             // 
@@ -351,16 +485,16 @@
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDatabase)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineBusiness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBusiness)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBLocalBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kgeletaDataSet)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dBBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_performance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBLocal_performance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBLocalBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -373,13 +507,8 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.DataGridView dataGridViewDatabase;
-        private System.Windows.Forms.BindingSource dBBindingSource;
-        private DatabasePerformanceTableAdapters.DBTableAdapter dBTableAdapter;
         private System.Windows.Forms.Button refreshBusiness;
         private System.Windows.Forms.DataGridView dataGridViewBusiness;
-        private kgeletaDataSet kgeletaDataSet;
-        private System.Windows.Forms.BindingSource dBLocalBindingSource;
-        private kgeletaDataSetTableAdapters.DBLocalTableAdapter dBLocalTableAdapter;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.ComboBox comboBoxComputerName;
         private System.Windows.Forms.Label labelComputerName;
@@ -394,7 +523,25 @@
         private System.Windows.Forms.Button buttonPresentation;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxPresentation;
-        private System.Windows.Forms.BindingSource dBBindingSource1;
+        private DB_performance dB_performance;
+        private System.Windows.Forms.BindingSource dBBindingSource2;
+        private DB_performanceTableAdapters.DBTableAdapter dBTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn computerNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lineNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpuTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn elapsedTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bytesReceivedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rowsSelectedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addTimeDataGridViewTextBoxColumn;
+        private DBLocal_performance dBLocal_performance;
+        private System.Windows.Forms.BindingSource dBLocalBindingSource1;
+        private DBLocal_performanceTableAdapters.DBLocalTableAdapter dBLocalTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn computerNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lineNumberDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpuTimeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpuUsageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn elapsedTimeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addTimeDataGridViewTextBoxColumn1;
     }
 }
 

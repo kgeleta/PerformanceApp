@@ -71,13 +71,15 @@ namespace PerformanceTester
         // LOAD:
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'kgeletaDataSet.DBLocal' table. You can move, or remove it, as needed.
-            //this.dBLocalTableAdapter.Fill(this.kgeletaDataSet.DBLocal);
-            // TODO: This line of code loads data into the 'databasePerformance.DB' table. You can move, or remove it, as needed.
-            //this.dBTableAdapter.Fill(this.databasePerformance.DB);
+            // TODO: This line of code loads data into the 'dBLocal_performance.DBLocal' table. You can move, or remove it, as needed.
+            this.dBLocalTableAdapter1.Fill(this.dBLocal_performance.DBLocal);
+            // TODO: This line of code loads data into the 'dB_performance.DB' table. You can move, or remove it, as needed.
+            this.dBTableAdapter1.Fill(this.dB_performance.DB);
+            
 
             // TEST:
-            dataGridViewDatabase.DataSource = QueryTestResult.Select();
+            //dataGridViewDatabase.DataSource = QueryTestResult.Select();
+            //dataGridViewBusiness.DataSource = LocalTestResult.Select();
 
             QueryTestResult.FillComputerName(comboBoxComputerName);
             LocalTestResult.FillComputerName(comboBoxComputerNameBusiness);
@@ -150,6 +152,11 @@ namespace PerformanceTester
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonPresentation_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -51,15 +51,15 @@
     <Compile Include="classes\LocalTestResult.cs" />
     <Compile Include="classes\PresentationTestResult.cs" />
     <Compile Include="classes\QueryTestResult.cs" />
-    <Compile Include="DatabasePerformance.Designer.cs">
+    <Compile Include="DBLocal_performance.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatabasePerformance.xsd</DependentUpon>
+      <DependentUpon>DBLocal_performance.xsd</DependentUpon>
     </Compile>
-    <Compile Include="kgeletaDataSet.Designer.cs">
+    <Compile Include="DB_performance.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>kgeletaDataSet.xsd</DependentUpon>
+      <DependentUpon>DB_performance.xsd</DependentUpon>
     </Compile>
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
@@ -81,27 +81,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DatabasePerformance.xsc">
-      <DependentUpon>DatabasePerformance.xsd</DependentUpon>
+    <None Include="DBLocal_performance.xsc">
+      <DependentUpon>DBLocal_performance.xsd</DependentUpon>
     </None>
-    <None Include="DatabasePerformance.xsd">
+    <None Include="DBLocal_performance.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabasePerformance.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBLocal_performance.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DatabasePerformance.xss">
-      <DependentUpon>DatabasePerformance.xsd</DependentUpon>
+    <None Include="DBLocal_performance.xss">
+      <DependentUpon>DBLocal_performance.xsd</DependentUpon>
     </None>
-    <None Include="kgeletaDataSet.xsc">
-      <DependentUpon>kgeletaDataSet.xsd</DependentUpon>
+    <None Include="DB_performance.xsc">
+      <DependentUpon>DB_performance.xsd</DependentUpon>
     </None>
-    <None Include="kgeletaDataSet.xsd">
+    <None Include="DB_performance.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>kgeletaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DB_performance.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="kgeletaDataSet.xss">
-      <DependentUpon>kgeletaDataSet.xsd</DependentUpon>
+    <None Include="DB_performance.xss">
+      <DependentUpon>DB_performance.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

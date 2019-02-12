@@ -20,9 +20,9 @@ namespace PerformanceTester {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("kgeletaDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DBLocal_performance")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class kgeletaDataSet : global::System.Data.DataSet {
+    public partial class DBLocal_performance : global::System.Data.DataSet {
         
         private DBLocalDataTable tableDBLocal;
         
@@ -30,7 +30,7 @@ namespace PerformanceTester {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public kgeletaDataSet() {
+        public DBLocal_performance() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace PerformanceTester {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected kgeletaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DBLocal_performance(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace PerformanceTester {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            kgeletaDataSet cln = ((kgeletaDataSet)(base.Clone()));
+            DBLocal_performance cln = ((DBLocal_performance)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace PerformanceTester {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "kgeletaDataSet";
+            this.DataSetName = "DBLocal_performance";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/kgeletaDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DBLocal_performance.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDBLocal = new DBLocalDataTable();
@@ -225,7 +225,7 @@ namespace PerformanceTester {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            kgeletaDataSet ds = new kgeletaDataSet();
+            DBLocal_performance ds = new DBLocal_performance();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -537,7 +537,7 @@ namespace PerformanceTester {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                kgeletaDataSet ds = new kgeletaDataSet();
+                DBLocal_performance ds = new DBLocal_performance();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -712,7 +712,7 @@ namespace PerformanceTester {
         }
     }
 }
-namespace PerformanceTester.kgeletaDataSetTableAdapters {
+namespace PerformanceTester.DBLocal_performanceTableAdapters {
     
     
     /// <summary>
@@ -879,7 +879,7 @@ namespace PerformanceTester.kgeletaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(kgeletaDataSet.DBLocalDataTable dataTable) {
+        public virtual int Fill(DBLocal_performance.DBLocalDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -892,9 +892,9 @@ namespace PerformanceTester.kgeletaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual kgeletaDataSet.DBLocalDataTable GetData() {
+        public virtual DBLocal_performance.DBLocalDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            kgeletaDataSet.DBLocalDataTable dataTable = new kgeletaDataSet.DBLocalDataTable();
+            DBLocal_performance.DBLocalDataTable dataTable = new DBLocal_performance.DBLocalDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -902,14 +902,14 @@ namespace PerformanceTester.kgeletaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(kgeletaDataSet.DBLocalDataTable dataTable) {
+        public virtual int Update(DBLocal_performance.DBLocalDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(kgeletaDataSet dataSet) {
+        public virtual int Update(DBLocal_performance dataSet) {
             return this.Adapter.Update(dataSet, "DBLocal");
         }
         
@@ -1052,7 +1052,7 @@ namespace PerformanceTester.kgeletaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(kgeletaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DBLocal_performance dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._dBLocalTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.DBLocal.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1071,7 +1071,7 @@ namespace PerformanceTester.kgeletaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(kgeletaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DBLocal_performance dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._dBLocalTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.DBLocal.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1089,7 +1089,7 @@ namespace PerformanceTester.kgeletaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(kgeletaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DBLocal_performance dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._dBLocalTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.DBLocal.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1131,7 +1131,7 @@ namespace PerformanceTester.kgeletaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(kgeletaDataSet dataSet) {
+        public virtual int UpdateAll(DBLocal_performance dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
