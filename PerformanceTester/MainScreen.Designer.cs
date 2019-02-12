@@ -32,15 +32,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelLineNumber = new System.Windows.Forms.Label();
+            this.numericUpDownLineNumber = new System.Windows.Forms.NumericUpDown();
             this.labelComputerName = new System.Windows.Forms.Label();
             this.comboBoxComputerName = new System.Windows.Forms.ComboBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.dataGridViewDatabase = new System.Windows.Forms.DataGridView();
-            this.dBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databasePerformance = new PerformanceTester.DatabasePerformance();
             this.refreshButton = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridViewBusiness = new System.Windows.Forms.DataGridView();
+            this.refreshBusiness = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.computerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lineNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpuTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elapsedTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bytesReceivedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rowsSelectedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databasePerformance = new PerformanceTester.DatabasePerformance();
             this.computerNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lineNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpuTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,29 +60,24 @@
             this.addTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dBLocalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kgeletaDataSet = new PerformanceTester.kgeletaDataSet();
-            this.refreshBusiness = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dBTableAdapter = new PerformanceTester.DatabasePerformanceTableAdapters.DBTableAdapter();
             this.dBLocalTableAdapter = new PerformanceTester.kgeletaDataSetTableAdapters.DBLocalTableAdapter();
-            this.numericUpDownLineNumber = new System.Windows.Forms.NumericUpDown();
-            this.labelLineNumber = new System.Windows.Forms.Label();
-            this.computerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lineNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpuTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.elapsedTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bytesReceivedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rowsSelectedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numericUpDownLineBusiness = new System.Windows.Forms.NumericUpDown();
+            this.comboBoxComputerNameBusiness = new System.Windows.Forms.ComboBox();
+            this.buttonSearchBusiness = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDatabase)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databasePerformance)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBusiness)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databasePerformance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBLocalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kgeletaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineBusiness)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -102,6 +108,27 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Database Layer";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // labelLineNumber
+            // 
+            this.labelLineNumber.AutoSize = true;
+            this.labelLineNumber.Location = new System.Drawing.Point(284, 48);
+            this.labelLineNumber.Name = "labelLineNumber";
+            this.labelLineNumber.Size = new System.Drawing.Size(70, 13);
+            this.labelLineNumber.TabIndex = 10;
+            this.labelLineNumber.Text = "Line Number:";
+            // 
+            // numericUpDownLineNumber
+            // 
+            this.numericUpDownLineNumber.Location = new System.Drawing.Point(287, 70);
+            this.numericUpDownLineNumber.Maximum = new decimal(new int[] {
+            2000000000,
+            0,
+            0,
+            0});
+            this.numericUpDownLineNumber.Name = "numericUpDownLineNumber";
+            this.numericUpDownLineNumber.Size = new System.Drawing.Size(129, 20);
+            this.numericUpDownLineNumber.TabIndex = 8;
             // 
             // labelComputerName
             // 
@@ -155,16 +182,6 @@
             this.dataGridViewDatabase.TabIndex = 3;
             this.dataGridViewDatabase.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDatabase_CellContentClick);
             // 
-            // dBBindingSource
-            // 
-            this.dBBindingSource.DataMember = "DB";
-            this.dBBindingSource.DataSource = this.databasePerformance;
-            // 
-            // databasePerformance
-            // 
-            this.databasePerformance.DataSetName = "DatabasePerformance";
-            this.databasePerformance.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // refreshButton
             // 
             this.refreshButton.Location = new System.Drawing.Point(22, 23);
@@ -177,6 +194,11 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.buttonSearchBusiness);
+            this.tabPage2.Controls.Add(this.comboBoxComputerNameBusiness);
+            this.tabPage2.Controls.Add(this.numericUpDownLineBusiness);
             this.tabPage2.Controls.Add(this.dataGridViewBusiness);
             this.tabPage2.Controls.Add(this.refreshBusiness);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -207,6 +229,86 @@
             this.dataGridViewBusiness.ReadOnly = true;
             this.dataGridViewBusiness.Size = new System.Drawing.Size(791, 296);
             this.dataGridViewBusiness.TabIndex = 1;
+            // 
+            // refreshBusiness
+            // 
+            this.refreshBusiness.Location = new System.Drawing.Point(22, 23);
+            this.refreshBusiness.Name = "refreshBusiness";
+            this.refreshBusiness.Size = new System.Drawing.Size(238, 111);
+            this.refreshBusiness.TabIndex = 0;
+            this.refreshBusiness.Text = "Refresh";
+            this.refreshBusiness.UseVisualStyleBackColor = true;
+            this.refreshBusiness.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tabPage3.Size = new System.Drawing.Size(807, 457);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // computerNameDataGridViewTextBoxColumn
+            // 
+            this.computerNameDataGridViewTextBoxColumn.DataPropertyName = "ComputerName";
+            this.computerNameDataGridViewTextBoxColumn.HeaderText = "ComputerName";
+            this.computerNameDataGridViewTextBoxColumn.Name = "computerNameDataGridViewTextBoxColumn";
+            this.computerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lineNumberDataGridViewTextBoxColumn
+            // 
+            this.lineNumberDataGridViewTextBoxColumn.DataPropertyName = "LineNumber";
+            this.lineNumberDataGridViewTextBoxColumn.HeaderText = "LineNumber";
+            this.lineNumberDataGridViewTextBoxColumn.Name = "lineNumberDataGridViewTextBoxColumn";
+            this.lineNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cpuTimeDataGridViewTextBoxColumn
+            // 
+            this.cpuTimeDataGridViewTextBoxColumn.DataPropertyName = "CpuTime";
+            this.cpuTimeDataGridViewTextBoxColumn.HeaderText = "CpuTime";
+            this.cpuTimeDataGridViewTextBoxColumn.Name = "cpuTimeDataGridViewTextBoxColumn";
+            this.cpuTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // elapsedTimeDataGridViewTextBoxColumn
+            // 
+            this.elapsedTimeDataGridViewTextBoxColumn.DataPropertyName = "ElapsedTime";
+            this.elapsedTimeDataGridViewTextBoxColumn.HeaderText = "ElapsedTime";
+            this.elapsedTimeDataGridViewTextBoxColumn.Name = "elapsedTimeDataGridViewTextBoxColumn";
+            this.elapsedTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bytesReceivedDataGridViewTextBoxColumn
+            // 
+            this.bytesReceivedDataGridViewTextBoxColumn.DataPropertyName = "BytesReceived";
+            this.bytesReceivedDataGridViewTextBoxColumn.HeaderText = "BytesReceived";
+            this.bytesReceivedDataGridViewTextBoxColumn.Name = "bytesReceivedDataGridViewTextBoxColumn";
+            this.bytesReceivedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rowsSelectedDataGridViewTextBoxColumn
+            // 
+            this.rowsSelectedDataGridViewTextBoxColumn.DataPropertyName = "RowsSelected";
+            this.rowsSelectedDataGridViewTextBoxColumn.HeaderText = "RowsSelected";
+            this.rowsSelectedDataGridViewTextBoxColumn.Name = "rowsSelectedDataGridViewTextBoxColumn";
+            this.rowsSelectedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addTimeDataGridViewTextBoxColumn
+            // 
+            this.addTimeDataGridViewTextBoxColumn.DataPropertyName = "AddTime";
+            this.addTimeDataGridViewTextBoxColumn.HeaderText = "AddTime";
+            this.addTimeDataGridViewTextBoxColumn.Name = "addTimeDataGridViewTextBoxColumn";
+            this.addTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dBBindingSource
+            // 
+            this.dBBindingSource.DataMember = "DB";
+            this.dBBindingSource.DataSource = this.databasePerformance;
+            // 
+            // databasePerformance
+            // 
+            this.databasePerformance.DataSetName = "DatabasePerformance";
+            this.databasePerformance.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // computerNameDataGridViewTextBoxColumn1
             // 
@@ -260,27 +362,6 @@
             this.kgeletaDataSet.DataSetName = "kgeletaDataSet";
             this.kgeletaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // refreshBusiness
-            // 
-            this.refreshBusiness.Location = new System.Drawing.Point(132, 44);
-            this.refreshBusiness.Name = "refreshBusiness";
-            this.refreshBusiness.Size = new System.Drawing.Size(106, 71);
-            this.refreshBusiness.TabIndex = 0;
-            this.refreshBusiness.Text = "Refresh";
-            this.refreshBusiness.UseVisualStyleBackColor = true;
-            this.refreshBusiness.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage3.Size = new System.Drawing.Size(807, 457);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
             // dBTableAdapter
             // 
             this.dBTableAdapter.ClearBeforeFill = true;
@@ -289,75 +370,54 @@
             // 
             this.dBLocalTableAdapter.ClearBeforeFill = true;
             // 
-            // numericUpDownLineNumber
+            // numericUpDownLineBusiness
             // 
-            this.numericUpDownLineNumber.Location = new System.Drawing.Point(287, 70);
-            this.numericUpDownLineNumber.Maximum = new decimal(new int[] {
+            this.numericUpDownLineBusiness.Location = new System.Drawing.Point(287, 70);
+            this.numericUpDownLineBusiness.Maximum = new decimal(new int[] {
             2000000000,
             0,
             0,
             0});
-            this.numericUpDownLineNumber.Name = "numericUpDownLineNumber";
-            this.numericUpDownLineNumber.Size = new System.Drawing.Size(129, 20);
-            this.numericUpDownLineNumber.TabIndex = 8;
+            this.numericUpDownLineBusiness.Name = "numericUpDownLineBusiness";
+            this.numericUpDownLineBusiness.Size = new System.Drawing.Size(129, 20);
+            this.numericUpDownLineBusiness.TabIndex = 2;
             // 
-            // labelLineNumber
+            // comboBoxComputerNameBusiness
             // 
-            this.labelLineNumber.AutoSize = true;
-            this.labelLineNumber.Location = new System.Drawing.Point(284, 48);
-            this.labelLineNumber.Name = "labelLineNumber";
-            this.labelLineNumber.Size = new System.Drawing.Size(70, 13);
-            this.labelLineNumber.TabIndex = 10;
-            this.labelLineNumber.Text = "Line Number:";
+            this.comboBoxComputerNameBusiness.FormattingEnabled = true;
+            this.comboBoxComputerNameBusiness.Location = new System.Drawing.Point(287, 113);
+            this.comboBoxComputerNameBusiness.Name = "comboBoxComputerNameBusiness";
+            this.comboBoxComputerNameBusiness.Size = new System.Drawing.Size(196, 21);
+            this.comboBoxComputerNameBusiness.TabIndex = 3;
             // 
-            // computerNameDataGridViewTextBoxColumn
+            // buttonSearchBusiness
             // 
-            this.computerNameDataGridViewTextBoxColumn.DataPropertyName = "ComputerName";
-            this.computerNameDataGridViewTextBoxColumn.HeaderText = "ComputerName";
-            this.computerNameDataGridViewTextBoxColumn.Name = "computerNameDataGridViewTextBoxColumn";
-            this.computerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.buttonSearchBusiness.Location = new System.Drawing.Point(434, 48);
+            this.buttonSearchBusiness.Name = "buttonSearchBusiness";
+            this.buttonSearchBusiness.Size = new System.Drawing.Size(91, 42);
+            this.buttonSearchBusiness.TabIndex = 4;
+            this.buttonSearchBusiness.Text = "Search";
+            this.buttonSearchBusiness.UseVisualStyleBackColor = true;
+            this.buttonSearchBusiness.Click += new System.EventHandler(this.buttonSearchBusiness_Click);
             // 
-            // lineNumberDataGridViewTextBoxColumn
+            // label1
             // 
-            this.lineNumberDataGridViewTextBoxColumn.DataPropertyName = "LineNumber";
-            this.lineNumberDataGridViewTextBoxColumn.HeaderText = "LineNumber";
-            this.lineNumberDataGridViewTextBoxColumn.Name = "lineNumberDataGridViewTextBoxColumn";
-            this.lineNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(284, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Line Number:";
+            this.label1.Click += new System.EventHandler(this.label1_Click_2);
             // 
-            // cpuTimeDataGridViewTextBoxColumn
+            // label2
             // 
-            this.cpuTimeDataGridViewTextBoxColumn.DataPropertyName = "CpuTime";
-            this.cpuTimeDataGridViewTextBoxColumn.HeaderText = "CpuTime";
-            this.cpuTimeDataGridViewTextBoxColumn.Name = "cpuTimeDataGridViewTextBoxColumn";
-            this.cpuTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // elapsedTimeDataGridViewTextBoxColumn
-            // 
-            this.elapsedTimeDataGridViewTextBoxColumn.DataPropertyName = "ElapsedTime";
-            this.elapsedTimeDataGridViewTextBoxColumn.HeaderText = "ElapsedTime";
-            this.elapsedTimeDataGridViewTextBoxColumn.Name = "elapsedTimeDataGridViewTextBoxColumn";
-            this.elapsedTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bytesReceivedDataGridViewTextBoxColumn
-            // 
-            this.bytesReceivedDataGridViewTextBoxColumn.DataPropertyName = "BytesReceived";
-            this.bytesReceivedDataGridViewTextBoxColumn.HeaderText = "BytesReceived";
-            this.bytesReceivedDataGridViewTextBoxColumn.Name = "bytesReceivedDataGridViewTextBoxColumn";
-            this.bytesReceivedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rowsSelectedDataGridViewTextBoxColumn
-            // 
-            this.rowsSelectedDataGridViewTextBoxColumn.DataPropertyName = "RowsSelected";
-            this.rowsSelectedDataGridViewTextBoxColumn.HeaderText = "RowsSelected";
-            this.rowsSelectedDataGridViewTextBoxColumn.Name = "rowsSelectedDataGridViewTextBoxColumn";
-            this.rowsSelectedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addTimeDataGridViewTextBoxColumn
-            // 
-            this.addTimeDataGridViewTextBoxColumn.DataPropertyName = "AddTime";
-            this.addTimeDataGridViewTextBoxColumn.HeaderText = "AddTime";
-            this.addTimeDataGridViewTextBoxColumn.Name = "addTimeDataGridViewTextBoxColumn";
-            this.addTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(284, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Computer Name:";
             // 
             // MainScreen
             // 
@@ -373,14 +433,16 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDatabase)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBusiness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databasePerformance)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBusiness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBLocalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kgeletaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLineBusiness)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,6 +481,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bytesReceivedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rowsSelectedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonSearchBusiness;
+        private System.Windows.Forms.ComboBox comboBoxComputerNameBusiness;
+        private System.Windows.Forms.NumericUpDown numericUpDownLineBusiness;
     }
 }
 

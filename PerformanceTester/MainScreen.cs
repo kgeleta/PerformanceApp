@@ -41,7 +41,7 @@ namespace PerformanceTester
 
         }
 
-        // REFRESH BUTTON:
+        // REFRESH BUTTON (DB LAYER):
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridViewDatabase.DataSource = QueryTestResult.Select();
@@ -68,6 +68,7 @@ namespace PerformanceTester
             
         }
 
+        // LOAD:
         private void MainScreen_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'kgeletaDataSet.DBLocal' table. You can move, or remove it, as needed.
@@ -76,6 +77,7 @@ namespace PerformanceTester
             this.dBTableAdapter.Fill(this.databasePerformance.DB);
             
             QueryTestResult.FillComputerName(comboBoxComputerName);
+            LocalTestResult.FillComputerName(comboBoxComputerNameBusiness);
 
             foreach (DataGridViewColumn c in this.dataGridViewDatabase.Columns)
             {
@@ -83,6 +85,7 @@ namespace PerformanceTester
             }
 
             numericUpDownLineNumber.Text = "";
+            numericUpDownLineBusiness.Text = "";
 
         }
 
@@ -96,9 +99,11 @@ namespace PerformanceTester
 
         }
 
+        // REFRESH BUTTON (LOCAL):
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            dataGridViewBusiness.DataSource = LocalTestResult.Select();
+            LocalTestResult.FillComputerName(comboBoxComputerNameBusiness);
         }
 
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
@@ -122,6 +127,21 @@ namespace PerformanceTester
         private void comboBoxComputerName_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        // SEARCH LOCAL:
+        private void buttonSearchBusiness_Click(object sender, EventArgs e)
+        {
+            String computerName = (String)comboBoxComputerNameBusiness.SelectedItem;
+            int lineNumber = (numericUpDownLineBusiness.Text == "" ? -1 : (int)numericUpDownLineBusiness.Value);
+
+            dataGridViewBusiness.DataSource = LocalTestResult.Search(computerName, lineNumber);
+
         }
     }
 }

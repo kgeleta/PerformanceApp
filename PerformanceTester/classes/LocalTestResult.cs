@@ -10,14 +10,13 @@ using System.Windows.Forms;
 
 namespace PerformanceTester.classes
 {
-    class QueryTestResult
+    class LocalTestResult
     {
         public String ComputerName { get; set; }
         public int LineNumber { get; set; }
         public long CpuTime { get; set; }
+        public long CpuUsage { get; set; }
         public long ElapsedTime { get; set; }
-        public long BytesReceived { get; set; }
-        public long SelectRows { get; set; }
         public String AddTime { get; set; }
 
         static String connectionStr = ConfigurationManager.ConnectionStrings["PerformanceTester.Properties.Settings.kgeletaConnectionString"].ConnectionString;
@@ -28,7 +27,7 @@ namespace PerformanceTester.classes
             DataTable dataTable = new DataTable();
             try
             {
-                String query = "use kgeleta; select* from Performance.DB order by ComputerName, LineNumber, AddTime desc;";
+                String query = "use kgeleta; select * from Performance.DBLocal order by ComputerName, LineNumber, AddTime desc;";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
 
@@ -48,7 +47,7 @@ namespace PerformanceTester.classes
             SqlConnection connection = new SqlConnection(connectionStr);
             try
             {
-                String query = "use kgeleta; select distinct ComputerName from Performance.DB;";
+                String query = "use kgeleta; select distinct ComputerName from Performance.DBLocal;";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.CommandType = CommandType.Text;
                 connection.Open();
@@ -82,7 +81,7 @@ namespace PerformanceTester.classes
             DataTable dataTable = new DataTable();
             try
             {
-                String query = "use kgeleta; select * from Performance.DB where ComputerName like '%" + computerName + "%'" +
+                String query = "use kgeleta; select * from Performance.DBLocal where ComputerName like '%" + computerName + "%'" +
                 (lineNumber >= 0 ? " and LineNumber = " + lineNumber.ToString() + " " : " ") + "order by ComputerName, LineNumber, AddTime desc;";
 
                 SqlCommand cmd = new SqlCommand(query, connection);
