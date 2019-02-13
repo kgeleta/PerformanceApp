@@ -242,5 +242,10 @@ namespace PerformanceTester
                 series.Points.AddXY(array[0], Convert.ToInt64(array[1]));
             }
         }
+
+        private void dataPlot_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

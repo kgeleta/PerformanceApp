@@ -120,10 +120,9 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1087, 594);
+            this.tabControl1.Size = new System.Drawing.Size(815, 483);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -135,11 +134,10 @@
             this.tabPage1.Controls.Add(this.buttonSearch);
             this.tabPage1.Controls.Add(this.dataGridViewDatabase);
             this.tabPage1.Controls.Add(this.refreshButton);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1079, 565);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(807, 457);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Data Access Layer";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -148,33 +146,30 @@
             // labelLineNumber
             // 
             this.labelLineNumber.AutoSize = true;
-            this.labelLineNumber.Location = new System.Drawing.Point(379, 59);
-            this.labelLineNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLineNumber.Location = new System.Drawing.Point(284, 48);
             this.labelLineNumber.Name = "labelLineNumber";
-            this.labelLineNumber.Size = new System.Drawing.Size(93, 17);
+            this.labelLineNumber.Size = new System.Drawing.Size(70, 13);
             this.labelLineNumber.TabIndex = 10;
             this.labelLineNumber.Text = "Line Number:";
             // 
             // numericUpDownLineNumber
             // 
-            this.numericUpDownLineNumber.Location = new System.Drawing.Point(383, 86);
-            this.numericUpDownLineNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDownLineNumber.Location = new System.Drawing.Point(287, 70);
             this.numericUpDownLineNumber.Maximum = new decimal(new int[] {
             2000000000,
             0,
             0,
             0});
             this.numericUpDownLineNumber.Name = "numericUpDownLineNumber";
-            this.numericUpDownLineNumber.Size = new System.Drawing.Size(172, 22);
+            this.numericUpDownLineNumber.Size = new System.Drawing.Size(129, 20);
             this.numericUpDownLineNumber.TabIndex = 8;
             // 
             // labelComputerName
             // 
             this.labelComputerName.AutoSize = true;
-            this.labelComputerName.Location = new System.Drawing.Point(379, 119);
-            this.labelComputerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelComputerName.Location = new System.Drawing.Point(284, 97);
             this.labelComputerName.Name = "labelComputerName";
-            this.labelComputerName.Size = new System.Drawing.Size(114, 17);
+            this.labelComputerName.Size = new System.Drawing.Size(86, 13);
             this.labelComputerName.TabIndex = 7;
             this.labelComputerName.Text = "Computer Name:";
             this.labelComputerName.Click += new System.EventHandler(this.label1_Click_1);
@@ -182,19 +177,17 @@
             // comboBoxComputerName
             // 
             this.comboBoxComputerName.FormattingEnabled = true;
-            this.comboBoxComputerName.Location = new System.Drawing.Point(383, 139);
-            this.comboBoxComputerName.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxComputerName.Location = new System.Drawing.Point(287, 113);
             this.comboBoxComputerName.Name = "comboBoxComputerName";
-            this.comboBoxComputerName.Size = new System.Drawing.Size(260, 24);
+            this.comboBoxComputerName.Size = new System.Drawing.Size(196, 21);
             this.comboBoxComputerName.TabIndex = 6;
             this.comboBoxComputerName.SelectedIndexChanged += new System.EventHandler(this.comboBoxComputerName_SelectedIndexChanged);
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(579, 59);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSearch.Location = new System.Drawing.Point(434, 48);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(121, 52);
+            this.buttonSearch.Size = new System.Drawing.Size(91, 42);
             this.buttonSearch.TabIndex = 5;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -216,11 +209,10 @@
             this.rowsSelectedDataGridViewTextBoxColumn,
             this.addTimeDataGridViewTextBoxColumn});
             this.dataGridViewDatabase.DataSource = this.dBBindingSource2;
-            this.dataGridViewDatabase.Location = new System.Drawing.Point(11, 191);
-            this.dataGridViewDatabase.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewDatabase.Location = new System.Drawing.Point(8, 155);
             this.dataGridViewDatabase.Name = "dataGridViewDatabase";
             this.dataGridViewDatabase.ReadOnly = true;
-            this.dataGridViewDatabase.Size = new System.Drawing.Size(1055, 364);
+            this.dataGridViewDatabase.Size = new System.Drawing.Size(791, 296);
             this.dataGridViewDatabase.TabIndex = 3;
             this.dataGridViewDatabase.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDatabase_CellContentClick);
             // 
@@ -285,10 +277,9 @@
             // 
             // refreshButton
             // 
-            this.refreshButton.Location = new System.Drawing.Point(29, 28);
-            this.refreshButton.Margin = new System.Windows.Forms.Padding(4);
+            this.refreshButton.Location = new System.Drawing.Point(22, 23);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(317, 137);
+            this.refreshButton.Size = new System.Drawing.Size(238, 111);
             this.refreshButton.TabIndex = 1;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = true;
@@ -303,11 +294,10 @@
             this.tabPage2.Controls.Add(this.numericUpDownLineBusiness);
             this.tabPage2.Controls.Add(this.dataGridViewBusiness);
             this.tabPage2.Controls.Add(this.refreshBusiness);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1079, 565);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(807, 457);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Business Layer";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -315,30 +305,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(379, 119);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(284, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 17);
+            this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Computer Name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(379, 59);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(284, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Line Number:";
             this.label1.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // buttonSearchBusiness
             // 
-            this.buttonSearchBusiness.Location = new System.Drawing.Point(579, 59);
-            this.buttonSearchBusiness.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSearchBusiness.Location = new System.Drawing.Point(434, 48);
             this.buttonSearchBusiness.Name = "buttonSearchBusiness";
-            this.buttonSearchBusiness.Size = new System.Drawing.Size(121, 52);
+            this.buttonSearchBusiness.Size = new System.Drawing.Size(91, 42);
             this.buttonSearchBusiness.TabIndex = 4;
             this.buttonSearchBusiness.Text = "Search";
             this.buttonSearchBusiness.UseVisualStyleBackColor = true;
@@ -347,23 +334,21 @@
             // comboBoxComputerNameBusiness
             // 
             this.comboBoxComputerNameBusiness.FormattingEnabled = true;
-            this.comboBoxComputerNameBusiness.Location = new System.Drawing.Point(383, 139);
-            this.comboBoxComputerNameBusiness.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxComputerNameBusiness.Location = new System.Drawing.Point(287, 113);
             this.comboBoxComputerNameBusiness.Name = "comboBoxComputerNameBusiness";
-            this.comboBoxComputerNameBusiness.Size = new System.Drawing.Size(260, 24);
+            this.comboBoxComputerNameBusiness.Size = new System.Drawing.Size(196, 21);
             this.comboBoxComputerNameBusiness.TabIndex = 3;
             // 
             // numericUpDownLineBusiness
             // 
-            this.numericUpDownLineBusiness.Location = new System.Drawing.Point(383, 86);
-            this.numericUpDownLineBusiness.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDownLineBusiness.Location = new System.Drawing.Point(287, 70);
             this.numericUpDownLineBusiness.Maximum = new decimal(new int[] {
             2000000000,
             0,
             0,
             0});
             this.numericUpDownLineBusiness.Name = "numericUpDownLineBusiness";
-            this.numericUpDownLineBusiness.Size = new System.Drawing.Size(172, 22);
+            this.numericUpDownLineBusiness.Size = new System.Drawing.Size(129, 20);
             this.numericUpDownLineBusiness.TabIndex = 2;
             // 
             // dataGridViewBusiness
@@ -381,11 +366,10 @@
             this.elapsedTimeDataGridViewTextBoxColumn1,
             this.addTimeDataGridViewTextBoxColumn1});
             this.dataGridViewBusiness.DataSource = this.dBLocalBindingSource1;
-            this.dataGridViewBusiness.Location = new System.Drawing.Point(11, 191);
-            this.dataGridViewBusiness.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewBusiness.Location = new System.Drawing.Point(8, 155);
             this.dataGridViewBusiness.Name = "dataGridViewBusiness";
             this.dataGridViewBusiness.ReadOnly = true;
-            this.dataGridViewBusiness.Size = new System.Drawing.Size(1055, 364);
+            this.dataGridViewBusiness.Size = new System.Drawing.Size(791, 296);
             this.dataGridViewBusiness.TabIndex = 1;
             // 
             // computerNameDataGridViewTextBoxColumn1
@@ -442,10 +426,9 @@
             // 
             // refreshBusiness
             // 
-            this.refreshBusiness.Location = new System.Drawing.Point(29, 28);
-            this.refreshBusiness.Margin = new System.Windows.Forms.Padding(4);
+            this.refreshBusiness.Location = new System.Drawing.Point(22, 23);
             this.refreshBusiness.Name = "refreshBusiness";
-            this.refreshBusiness.Size = new System.Drawing.Size(317, 137);
+            this.refreshBusiness.Size = new System.Drawing.Size(238, 111);
             this.refreshBusiness.TabIndex = 0;
             this.refreshBusiness.Text = "Refresh";
             this.refreshBusiness.UseVisualStyleBackColor = true;
@@ -457,23 +440,21 @@
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.textBoxPresentation);
             this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage3.Size = new System.Drawing.Size(1079, 565);
+            this.tabPage3.Size = new System.Drawing.Size(807, 457);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Presentation Layer";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // buttonPresentation
             // 
-            this.buttonPresentation.Location = new System.Drawing.Point(784, 65);
-            this.buttonPresentation.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonPresentation.Location = new System.Drawing.Point(588, 53);
             this.buttonPresentation.Name = "buttonPresentation";
             this.buttonPresentation.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buttonPresentation.Size = new System.Drawing.Size(100, 28);
+            this.buttonPresentation.Size = new System.Drawing.Size(75, 23);
             this.buttonPresentation.TabIndex = 3;
             this.buttonPresentation.Text = "test";
             this.buttonPresentation.UseVisualStyleBackColor = true;
@@ -482,32 +463,29 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 71);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(33, 58);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(40, 17);
+            this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "URL:";
             // 
             // textBoxPresentation
             // 
-            this.textBoxPresentation.Location = new System.Drawing.Point(92, 68);
-            this.textBoxPresentation.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPresentation.Location = new System.Drawing.Point(69, 55);
             this.textBoxPresentation.Name = "textBoxPresentation";
             this.textBoxPresentation.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBoxPresentation.Size = new System.Drawing.Size(671, 22);
+            this.textBoxPresentation.Size = new System.Drawing.Size(504, 20);
             this.textBoxPresentation.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(64, 30);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(48, 24);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(271, 17);
+            this.label3.Size = new System.Drawing.Size(201, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Measure request, response and total time";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -522,11 +500,10 @@
             this.tabPage4.Controls.Add(this.label6);
             this.tabPage4.Controls.Add(this.comboBoxLineNumberDataPlot);
             this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(1079, 565);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Size = new System.Drawing.Size(807, 457);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Data Access Layer Plot";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -535,23 +512,24 @@
             // 
             chartArea1.Name = "ChartArea1";
             this.dataPlot.ChartAreas.Add(chartArea1);
-            this.dataPlot.Location = new System.Drawing.Point(213, 17);
+            this.dataPlot.Location = new System.Drawing.Point(160, 14);
+            this.dataPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataPlot.Name = "dataPlot";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.EmptyPointStyle.Color = System.Drawing.Color.Red;
             series1.Name = "Series1";
             this.dataPlot.Series.Add(series1);
-            this.dataPlot.Size = new System.Drawing.Size(858, 518);
+            this.dataPlot.Size = new System.Drawing.Size(644, 421);
             this.dataPlot.TabIndex = 7;
             this.dataPlot.Text = "chart1";
+            this.dataPlot.Click += new System.EventHandler(this.dataPlot_Click);
             // 
             // buttonDataPlot
             // 
-            this.buttonDataPlot.Location = new System.Drawing.Point(12, 190);
-            this.buttonDataPlot.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDataPlot.Location = new System.Drawing.Point(9, 154);
             this.buttonDataPlot.Name = "buttonDataPlot";
-            this.buttonDataPlot.Size = new System.Drawing.Size(121, 52);
+            this.buttonDataPlot.Size = new System.Drawing.Size(91, 42);
             this.buttonDataPlot.TabIndex = 6;
             this.buttonDataPlot.Text = "Make a plot";
             this.buttonDataPlot.UseVisualStyleBackColor = true;
@@ -560,17 +538,19 @@
             // comboBoxParameterDataPlot
             // 
             this.comboBoxParameterDataPlot.FormattingEnabled = true;
-            this.comboBoxParameterDataPlot.Location = new System.Drawing.Point(12, 138);
+            this.comboBoxParameterDataPlot.Location = new System.Drawing.Point(9, 112);
+            this.comboBoxParameterDataPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxParameterDataPlot.Name = "comboBoxParameterDataPlot";
-            this.comboBoxParameterDataPlot.Size = new System.Drawing.Size(172, 24);
+            this.comboBoxParameterDataPlot.Size = new System.Drawing.Size(130, 21);
             this.comboBoxParameterDataPlot.TabIndex = 5;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 117);
+            this.label7.Location = new System.Drawing.Point(7, 95);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 17);
+            this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 4;
             this.label7.Text = "Parameter:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -578,34 +558,38 @@
             // comboBoxComputerNameDataPlot
             // 
             this.comboBoxComputerNameDataPlot.FormattingEnabled = true;
-            this.comboBoxComputerNameDataPlot.Location = new System.Drawing.Point(12, 81);
+            this.comboBoxComputerNameDataPlot.Location = new System.Drawing.Point(9, 66);
+            this.comboBoxComputerNameDataPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxComputerNameDataPlot.Name = "comboBoxComputerNameDataPlot";
-            this.comboBoxComputerNameDataPlot.Size = new System.Drawing.Size(172, 24);
+            this.comboBoxComputerNameDataPlot.Size = new System.Drawing.Size(130, 21);
             this.comboBoxComputerNameDataPlot.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 61);
+            this.label6.Location = new System.Drawing.Point(7, 50);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 17);
+            this.label6.Size = new System.Drawing.Size(86, 13);
             this.label6.TabIndex = 2;
             this.label6.Text = "Computer Name:";
             // 
             // comboBoxLineNumberDataPlot
             // 
             this.comboBoxLineNumberDataPlot.FormattingEnabled = true;
-            this.comboBoxLineNumberDataPlot.Location = new System.Drawing.Point(12, 29);
+            this.comboBoxLineNumberDataPlot.Location = new System.Drawing.Point(9, 24);
+            this.comboBoxLineNumberDataPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxLineNumberDataPlot.Name = "comboBoxLineNumberDataPlot";
-            this.comboBoxLineNumberDataPlot.Size = new System.Drawing.Size(172, 24);
+            this.comboBoxLineNumberDataPlot.Size = new System.Drawing.Size(130, 21);
             this.comboBoxLineNumberDataPlot.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 8);
+            this.label5.Location = new System.Drawing.Point(7, 6);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 17);
+            this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Line Number:\r\n";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -620,11 +604,10 @@
             this.tabPage5.Controls.Add(this.label9);
             this.tabPage5.Controls.Add(this.comboBoxLineNumberBusinessPlot);
             this.tabPage5.Controls.Add(this.label10);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(1079, 565);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Size = new System.Drawing.Size(807, 457);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Business Layer Plot";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -633,21 +616,21 @@
             // 
             chartArea2.Name = "ChartArea1";
             this.businessPlot.ChartAreas.Add(chartArea2);
-            this.businessPlot.Location = new System.Drawing.Point(213, 17);
+            this.businessPlot.Location = new System.Drawing.Point(160, 14);
+            this.businessPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.businessPlot.Name = "businessPlot";
             series2.ChartArea = "ChartArea1";
             series2.Name = "Series1";
             this.businessPlot.Series.Add(series2);
-            this.businessPlot.Size = new System.Drawing.Size(858, 518);
+            this.businessPlot.Size = new System.Drawing.Size(644, 421);
             this.businessPlot.TabIndex = 15;
             this.businessPlot.Text = "chart2";
             // 
             // buttonBusinessPlot
             // 
-            this.buttonBusinessPlot.Location = new System.Drawing.Point(12, 190);
-            this.buttonBusinessPlot.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBusinessPlot.Location = new System.Drawing.Point(9, 154);
             this.buttonBusinessPlot.Name = "buttonBusinessPlot";
-            this.buttonBusinessPlot.Size = new System.Drawing.Size(121, 52);
+            this.buttonBusinessPlot.Size = new System.Drawing.Size(91, 42);
             this.buttonBusinessPlot.TabIndex = 14;
             this.buttonBusinessPlot.Text = "Make a plot";
             this.buttonBusinessPlot.UseVisualStyleBackColor = true;
@@ -656,51 +639,57 @@
             // comboBoxParameterBusinessPlot
             // 
             this.comboBoxParameterBusinessPlot.FormattingEnabled = true;
-            this.comboBoxParameterBusinessPlot.Location = new System.Drawing.Point(12, 138);
+            this.comboBoxParameterBusinessPlot.Location = new System.Drawing.Point(9, 112);
+            this.comboBoxParameterBusinessPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxParameterBusinessPlot.Name = "comboBoxParameterBusinessPlot";
-            this.comboBoxParameterBusinessPlot.Size = new System.Drawing.Size(172, 24);
+            this.comboBoxParameterBusinessPlot.Size = new System.Drawing.Size(130, 21);
             this.comboBoxParameterBusinessPlot.TabIndex = 13;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 117);
+            this.label8.Location = new System.Drawing.Point(7, 95);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 17);
+            this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 12;
             this.label8.Text = "Parameter:";
             // 
             // comboBoxComputerNameBusinessPlot
             // 
             this.comboBoxComputerNameBusinessPlot.FormattingEnabled = true;
-            this.comboBoxComputerNameBusinessPlot.Location = new System.Drawing.Point(12, 81);
+            this.comboBoxComputerNameBusinessPlot.Location = new System.Drawing.Point(9, 66);
+            this.comboBoxComputerNameBusinessPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxComputerNameBusinessPlot.Name = "comboBoxComputerNameBusinessPlot";
-            this.comboBoxComputerNameBusinessPlot.Size = new System.Drawing.Size(172, 24);
+            this.comboBoxComputerNameBusinessPlot.Size = new System.Drawing.Size(130, 21);
             this.comboBoxComputerNameBusinessPlot.TabIndex = 11;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 61);
+            this.label9.Location = new System.Drawing.Point(7, 50);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 17);
+            this.label9.Size = new System.Drawing.Size(86, 13);
             this.label9.TabIndex = 10;
             this.label9.Text = "Computer Name:";
             // 
             // comboBoxLineNumberBusinessPlot
             // 
             this.comboBoxLineNumberBusinessPlot.FormattingEnabled = true;
-            this.comboBoxLineNumberBusinessPlot.Location = new System.Drawing.Point(12, 29);
+            this.comboBoxLineNumberBusinessPlot.Location = new System.Drawing.Point(9, 24);
+            this.comboBoxLineNumberBusinessPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxLineNumberBusinessPlot.Name = "comboBoxLineNumberBusinessPlot";
-            this.comboBoxLineNumberBusinessPlot.Size = new System.Drawing.Size(172, 24);
+            this.comboBoxLineNumberBusinessPlot.Size = new System.Drawing.Size(130, 21);
             this.comboBoxLineNumberBusinessPlot.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 8);
+            this.label10.Location = new System.Drawing.Point(7, 6);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 17);
+            this.label10.Size = new System.Drawing.Size(70, 13);
             this.label10.TabIndex = 8;
             this.label10.Text = "Line Number:\r\n";
             // 
@@ -714,13 +703,12 @@
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 594);
+            this.ClientSize = new System.Drawing.Size(815, 483);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainScreen";
             this.Text = "Performance Tester";
             this.Load += new System.EventHandler(this.MainScreen_Load);
