@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PerformanceTester
 {
@@ -83,6 +84,12 @@ namespace PerformanceTester
 
             QueryTestResult.FillComputerName(comboBoxComputerName);
             LocalTestResult.FillComputerName(comboBoxComputerNameBusiness);
+            QueryTestPlot.FillComputerName(comboBoxComputerNameDataPlot);
+            QueryTestPlot.FillLineNumber(comboBoxLineNumberDataPlot);
+            QueryTestPlot.FillParameter(comboBoxParameterDataPlot);
+            LocalTestPlot.FillComputerName(comboBoxComputerNameBusinessPlot);
+            LocalTestPlot.FillLineNumber(comboBoxLineNumberBusinessPlot);
+            LocalTestPlot.FillParameter(comboBoxParameterBusinessPlot);
 
             foreach (DataGridViewColumn c in this.dataGridViewDatabase.Columns)
             {
@@ -157,6 +164,83 @@ namespace PerformanceTester
         private void buttonPresentation_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDataPlot_Click(object sender, EventArgs e)
+        {
+            String computerName = (String)comboBoxComputerNameDataPlot.SelectedItem;
+            int lineNumber = (int)comboBoxLineNumberDataPlot.SelectedItem;
+            String parameter = (String)comboBoxParameterDataPlot.SelectedItem;
+
+            List<String> list = QueryTestPlot.Plot(computerName, lineNumber, parameter);
+
+            dataPlot.Series.Clear();
+            dataPlot.ChartAreas[0].AxisX.IsMarginVisible = false;
+            var series = new Series
+            {
+                Name = parameter,
+                Color = Color.Red,
+                IsVisibleInLegend = false,
+                IsXValueIndexed = true,
+                ChartType = SeriesChartType.Line
+            };
+            dataPlot.Series.Add(series);
+
+            dataPlot.ChartAreas[0].RecalculateAxesScale();
+
+            for (int i = 0; i < list.Count; i++) {
+                string[] array = list[i].Split('|');
+                series.Points.AddXY(array[0], Convert.ToInt64(array[1]));
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBusinessPlot_Click(object sender, EventArgs e)
+        {
+            String computerName = (String)comboBoxComputerNameBusinessPlot.SelectedItem;
+            int lineNumber = (int)comboBoxLineNumberBusinessPlot.SelectedItem;
+            String parameter = (String)comboBoxParameterBusinessPlot.SelectedItem;
+
+            List<String> list = LocalTestPlot.Plot(computerName, lineNumber, parameter);
+
+            businessPlot.Series.Clear();
+            businessPlot.ChartAreas[0].AxisX.IsMarginVisible = false;
+            var series = new Series
+            {
+                Name = parameter,
+                Color = Color.Red,
+                IsVisibleInLegend = false,
+                IsXValueIndexed = true,
+                ChartType = SeriesChartType.Line
+            };
+            businessPlot.Series.Add(series);
+
+            businessPlot.ChartAreas[0].RecalculateAxesScale();
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                string[] array = list[i].Split('|');
+                series.Points.AddXY(array[0], Convert.ToInt64(array[1]));
+            }
         }
     }
 }
